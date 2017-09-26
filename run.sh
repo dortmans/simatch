@@ -15,7 +15,7 @@ popd > /dev/null
 
 # Run the container with shared X11
 docker run\
-  --device=/dev/dri:/dev/dri \
+  --privileged\
   --net=host\
   -e SHELL\
   -e DISPLAY\
@@ -23,3 +23,4 @@ docker run\
   -v "$HOME:$HOME:rw"\
   -v "/tmp/.X11-unix:/tmp/.X11-unix:rw"\
   -it $1 $SHELL
+#  --device=/dev/dri:/dev/dri
