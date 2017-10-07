@@ -22,5 +22,5 @@ docker run\
   -e DOCKER=1\
   -v "$HOME:$HOME:rw"\
   -v "/tmp/.X11-unix:/tmp/.X11-unix:rw"\
-  -it $1 $SHELL
+  -it --rm $1 $SHELL
 #  --device=/dev/dri:/dev/dri
