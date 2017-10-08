@@ -42,6 +42,7 @@ RUN /bin/bash -c "source /opt/ros/indigo/setup.bash && \
     cd simatch && \
     catkin_make"
 COPY ./ros_entrypoint.sh /
+ENTRYPOINT ["/ros_entrypoint.sh"]
 
 # Clone user into docker image 
 RUN \
