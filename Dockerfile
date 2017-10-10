@@ -41,8 +41,8 @@ RUN /bin/bash -c "source /opt/ros/indigo/setup.bash && \
     git clone https://github.com/nubot-nudt/simatch.git && \
     cd simatch && \
     catkin_make"
-COPY ./ros_entrypoint.sh /
-ENTRYPOINT ["/ros_entrypoint.sh"]
+COPY ./simatch_entrypoint.sh /
+ENTRYPOINT ["/simatch_entrypoint.sh"]
 
 # Clone user into docker image 
 RUN \
